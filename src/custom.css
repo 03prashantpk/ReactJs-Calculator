@@ -111,6 +111,20 @@ button:hover {
     cursor: pointer;
 }
 
+.Credit{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    color: #303030;
+}
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+
+}
 
 
 /* Chrome, Safari, Edge, Opera */
