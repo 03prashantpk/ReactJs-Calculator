@@ -1,7 +1,6 @@
 import React from "react";
 
 function History({ entries, isOn, handleEntryClick }) {
-
   const renderEntries = () => {
     return (
       <>
@@ -11,7 +10,7 @@ function History({ entries, isOn, handleEntryClick }) {
             title={entry}>{index + 1}. {entry}</h4>
         ))}
       </>
-    )
+    );
   }
 
   return (

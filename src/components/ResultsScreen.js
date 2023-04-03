@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import Buttons from "./Buttons";
 import History from "./History";
 import { calculateResult } from "./logics";
+import Profile from "./Profile";
+import PlayAudio  from "./ButtonClickAudio";
+import Styling from "./Styling";
 
 const ResultScreen = () => {
-  const [inputValue, setInputValue] = useState("0");
+  const [inputValue, setInputValue] = useState();
   const [isOn, setIsOn] = useState(false);
   const [history, setHistory] = useState([]);
+  const [isPlayOn, setIsPlay] = useState(false)
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -18,6 +22,7 @@ const ResultScreen = () => {
   };
 
   const handleButtonPress = (value) => {
+    setIsPlay(true)
     if (value === "clear") {
       setInputValue("0");
     } else if (value === "=") {
@@ -64,11 +69,10 @@ const ResultScreen = () => {
         onClick={handleToggle}
       />
       <Buttons handleButtonPress={handleButtonPress} isOn={isOn} />
-      <History
-        entries={history}
-        isOn={isOn}
-        handleEntryClick={handleEntryClick}
-      />
+      <History entries={history}  isOn={isOn} handleEntryClick={handleEntryClick} />
+      <Profile isOn={isOn}/>
+      <PlayAudio isPlay={isPlayOn}/>
+      <Styling isOnStyling={isOn}/>
     </>
   );
 };

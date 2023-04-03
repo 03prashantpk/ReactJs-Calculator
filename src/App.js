@@ -13,7 +13,6 @@ function App() {
             <CalculatorLayout></CalculatorLayout>
           </div>
       </div>
-
     </div>
   );
 }
