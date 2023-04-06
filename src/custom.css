@@ -230,6 +230,7 @@ h4:hover {
     right: 37.5%;
     border-radius: 0px 0px 22px 22px;
     border-top: 2px dashed #424242;
+    animation: Calcover 1.2s ease-in-out;
 }
 
 
@@ -249,6 +250,7 @@ h4:hover {
     position: absolute;
     bottom: 0;
     opacity: 0.4;
+
 }
 
 .profile-outer>p:nth-child(even)::after {
@@ -276,6 +278,8 @@ h4:hover {
     }
 }
 
+
+
 @keyframes slideTwo {
     0% {
         transform: translateX(-100%);
@@ -283,6 +287,15 @@ h4:hover {
 
     100% {
         transform: translateX(0%);
+    }
+}
+
+@keyframes Calcover {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
     }
 }
 
@@ -316,21 +329,19 @@ input[type=number] {
     .history-outer {
         display: hidden;
     }
-    .Cover{
+
+    .Cover {
         display: none;
     }
 }
 
 @media screen and (min-width: 770px) and (max-width: 1513px) {
 
-    .Cover{
+    .Cover {
         display: none;
     }
 
 }
-
-  
-
 
 @media only screen and (max-width: 480px) {
     .calculator-inner {
@@ -349,7 +360,8 @@ input[type=number] {
     .calculation-buttons {
         width: 40%;
     }
-    .Cover{
+
+    .Cover {
         display: none;
     }
 }
